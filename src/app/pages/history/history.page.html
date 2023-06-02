@@ -1,0 +1,37 @@
+<ion-header [translucent]="true"> 
+  <ion-toolbar > 
+   <p class="kalimat">History</p>
+  </ion-toolbar> 
+</ion-header> 
+
+<ion-content [fullscreen]="true"> 
+  <ion-card *ngFor="let key of DataUser " (click)="detail(key.idPesanan)" > 
+  <ion-card-header class="header"> 
+    <div> 
+      <ion-card-subtitle class="judul">Bayu Store</ion-card-subtitle> 
+    </div> 
+    <div> 
+      <ion-card-subtitle class="jdudl">Selesai</ion-card-subtitle> 
+    </div> 
+  </ion-card-header> 
+ 
+  <ion-card-content > 
+    <div class="body"> 
+      <div class="image"> 
+        <img src="{{ key.gambar}}" alt=""> 
+      </div> 
+      <div class="teks"> 
+        <div> 
+          <span> {{ key.namaProduk}}</span> 
+        </div> 
+        <div> 
+          <span>12000</span> 
+          <span> x </span> 
+          <span>4</span> 
+        </div> 
+       
+      </div> 
+    </div> 
+  </ion-card-content> 
+</ion-card> 
+<ion-card> 

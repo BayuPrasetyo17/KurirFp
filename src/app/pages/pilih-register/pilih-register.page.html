@@ -1,0 +1,46 @@
+<ion-content [fullscreen]="true"> 
+  <div id="header"> 
+    <div id="app-bar"> 
+      <ion-icon name="arrow-back" routerLink="/welcome"></ion-icon> 
+      <div id="logo" routerLink="/welcome"> 
+        <img src="./assets/image/Logo.png" alt="Logo"/> 
+      </div> 
+    </div> 
+ 
+    <h1>Register Kurir Jastip</h1> 
+    <p>Silahkan Mendaftar</p> 
+  </div> 
+ 
+  <div class="wrapper"> 
+    <ion-card class="form-wrapper"> 
+      <ion-card-content> 
+        <ion-item> 
+          <ion-icon name="person"></ion-icon> 
+          <ion-input type="text" placeholder="Username"  [(ngModel)]="form.username" [ngModelOptions]="{standalone: true}"></ion-input> 
+        </ion-item> 
+        <ion-item> 
+          <ion-icon name="mail-outline"></ion-icon> 
+          <ion-input type="text" placeholder="Email"  [(ngModel)]="form.email" [ngModelOptions]="{standalone: true}"></ion-input> 
+        </ion-item> 
+        <ion-item> 
+          <ion-icon name="lock-closed"></ion-icon> 
+          <ion-input type="text" placeholder="Password"  [(ngModel)]="form.password" [ngModelOptions]="{standalone: true}"></ion-input> 
+        </ion-item> 
+        <ion-item> 
+          <ion-icon name="call-outline"></ion-icon> 
+          <ion-input type="text" placeholder="PhoneKurir"  [(ngModel)]="form.phoneKurir" [ngModelOptions]="{standalone: true}"></ion-input> 
+        </ion-item> 
+        <ion-button expand="block" (click)="validForm()"> 
+          Register 
+        </ion-button> 
+      </ion-card-content> 
+    </ion-card> 
+ 
+    <div class="line-text"> 
+      
+      
+    </div> 
+ 
+     
+  </div> 
+</ion-content>

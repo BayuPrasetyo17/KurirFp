@@ -1,0 +1,32 @@
+<ion-header [translucent]="true"> 
+  <ion-toolbar > 
+    <ion-icon name="arrow-back" routerLink="/tabs/profile"></ion-icon>
+   <p class="kalimat">Help&Support</p>
+  </ion-toolbar> 
+</ion-header> 
+
+<ion-content [fullscreen]="true">
+  <div class="support-logo">
+    <img src="assets/image/Logo.png" alt="">
+  </div>
+
+  <div class="support-form">
+    <form #submitForm="ngForm" novalidate (ngSubmit)="submit(submitForm)">
+      <ion-textarea
+        placeholder="Enter your support message below"
+        labelPlacement="stacked"
+        fill="solid"
+        [(ngModel)]="supportMessage"
+        name="supportQuestion"
+        #supportQuestion="ngModel"
+        rows="6"
+        errorText="Support message is required"
+        required>
+      </ion-textarea>
+
+      <div class="ion-padding">
+        <ion-button expand="block" type="submit">Submit</ion-button>
+      </div>
+    </form>
+  </div>
+</ion-content>

@@ -1,0 +1,40 @@
+<ion-content [fullscreen]="true"> 
+  <div id="header"> 
+    <div id="app-bar"> 
+      <ion-icon name="arrow-back" routerLink="/welcome"></ion-icon> 
+      <div id="logo" routerLink="/welcome"> 
+        <img src=".\assets\image\Logo.png" alt=""/> 
+      </div> 
+    </div> 
+ 
+    <h1>Login</h1> 
+    <p>Halo Senang Bertemu Dengan Anda</p> 
+  </div> 
+ 
+  <div class="wrapper"> 
+    <ion-card class="form-wrapper"> 
+      <ion-card-content> 
+        <ion-item> 
+          <ion-icon name="mail"></ion-icon> 
+          <ion-input type="text" placeholder="Email" [(ngModel)]="form.email" [ngModelOptions]="{standalone: true}"></ion-input> 
+        </ion-item> 
+        <ion-item> 
+          <ion-icon name="lock-closed"></ion-icon> 
+          <ion-input type="password" placeholder="Password" [(ngModel)]="form.password" [ngModelOptions]="{standalone: true}"></ion-input> 
+        </ion-item> 
+        <ion-button expand="block" (click)="login()"> 
+          Log In 
+        </ion-button> 
+      </ion-card-content> 
+    </ion-card> 
+     
+    <div class="sign-up"> 
+      <div> 
+        Belum Punya Account?  
+      </div> 
+      <div> 
+        <ion-button color="dark" fill="clear" routerLink="/pilih-register" color="primary">Sign Up</ion-button> 
+      </div> 
+    </div> 
+  </div> 
+</ion-content>

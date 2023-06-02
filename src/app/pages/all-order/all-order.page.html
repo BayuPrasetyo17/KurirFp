@@ -1,0 +1,53 @@
+<ion-header [translucent]="true"> 
+  <ion-toolbar  class="toolbar"> 
+    <p class="kalimat"> 
+      All Order 
+    </p> 
+  </ion-toolbar> 
+</ion-header> 
+ 
+<ion-content [fullscreen]="true"> 
+  <div *ngFor="let key of DataUser ">
+    <ion-card (click)="detail(key.namaToko,key.createBy)" > 
+      <ion-card-header class="header"> 
+        <div> 
+          <ion-card-subtitle class="judul">{{key.namaToko}}</ion-card-subtitle> 
+        </div>  
+      </ion-card-header> 
+     
+      <ion-card-content > 
+        <div class="body"> 
+          <div class="image"> 
+            <img src="{{ key.gambar }}" alt=""> 
+          </div> 
+          <ion-grid>
+            <ion-row>
+              <ion-col size="auto">
+                <div style="width: 58px">Pesanan</div>
+              </ion-col>
+              <ion-col size="auto">
+                <div style="width: 10px">:</div>
+              </ion-col>
+              <ion-col>{{key.item}} item</ion-col>
+            </ion-row>
+  
+            <ion-row>
+              <ion-col size="auto">
+                <div style="width: 58px">Total</div>
+              </ion-col>
+              <ion-col size="auto">
+                <div style="width: 10px">:</div>
+              </ion-col>
+            <ion-col>Rp.{{key.subtotal}}</ion-col>
+            </ion-row>
+          </ion-grid>
+
+        </div> 
+      </ion-card-content> 
+        <div class="footer"> 
+        </div> 
+    </ion-card> 
+  </div>
+  
+
+</ion-content>

@@ -1,0 +1,33 @@
+ 
+<ion-content *ngFor="let key of DataUser "> 
+  <img class="profile" src="https://www.gravatar.com/avatar?d=mm&s=140" alt="avatar">
+  <div class="container">
+  <span class="kalimat">{{ key.namaKurir	}}</span> 
+  </div>
+  
+  <div class="profile-container ion-padding" > 
+    <div class="heading ion-padding">
+      <ion-list> 
+        <ion-item lines="none"> 
+          <ion-icon name="document-text-outline"></ion-icon> 
+          <ion-label  routerLink="/about">About</ion-label> 
+          <ion-icon name="chevron-forward-outline"></ion-icon> 
+        </ion-item> 
+      </ion-list> 
+      <ion-list> 
+        <ion-item lines="none"> 
+          <ion-icon name="help-circle-outline"></ion-icon> 
+          <ion-label  routerLink="/support">Help & Support</ion-label> 
+          <ion-icon name="chevron-forward-outline"></ion-icon> 
+        </ion-item> 
+      </ion-list> 
+      <ion-list> 
+        <ion-item lines="none"> 
+          <ion-icon name="exit-outline"></ion-icon> 
+          <ion-label routerLink="/welcome">Log Out</ion-label> 
+          <ion-icon name="chevron-forward-outline"></ion-icon> 
+        </ion-item> 
+      </ion-list> 
+    </div> 
+  </div> 
+</ion-content>

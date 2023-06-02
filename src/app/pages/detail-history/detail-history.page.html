@@ -1,0 +1,87 @@
+
+<ion-content [fullscreen]="true" *ngFor="let key of DataUser "> 
+  <div id="header"> 
+    <ion-icon name="arrow-back" routerLink="/tabs/history" class="back"></ion-icon> 
+    <div id="logo"> 
+      <img src="{{ key.gambar }}" alt="logo"/> 
+    </div> 
+  </div> 
+  <ion-card class="ion-padding"> 
+    <ion-card-content> 
+      <h1>{{key.namaProduk}}</h1>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="auto">
+            <div style="width: 60px">Toko</div>
+          </ion-col>
+          <ion-col size="auto">
+            <div style="width: 10px">:</div>
+          </ion-col>
+          <ion-col>{{key.namaToko}}</ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="auto">
+            <div style="width: 60px">Alamat Toko</div>
+          </ion-col>
+          <ion-col size="auto">
+            <div style="width: 10px">:</div>
+          </ion-col>
+          <ion-col>{{key.alamatToko}}</ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="auto">
+            <div style="width: 60px">phone Seller</div>
+          </ion-col>
+          <ion-col size="auto">
+            <div style="width: 10px">:</div>
+          </ion-col>
+          <ion-col>{{key.phoneSeller}}</ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="auto">
+            <div style="width: 60px">jumlah Pesanan</div>
+          </ion-col>
+          <ion-col size="auto">
+            <div style="width: 10px">:</div>
+          </ion-col>
+          <ion-col>{{key.jumlahBarang}}</ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="auto">
+            <div style="width: 60px">Pembeli</div>
+          </ion-col>
+          <ion-col size="auto">
+            <div style="width: 10px">:</div>
+          </ion-col>
+          <ion-col>{{key.namaUser}}</ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="auto">
+            <div style="width: 60px">Alamat Pembeli</div>
+          </ion-col>
+          <ion-col size="auto">
+            <div style="width: 10px">:</div>
+          </ion-col>
+          <ion-col>{{key.alamatUser}}</ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="auto">
+            <div style="width: 60px">Phone</div>
+          </ion-col>
+          <ion-col size="auto">
+            <div style="width: 10px">:</div>
+          </ion-col>
+          <ion-col>{{key.phoneSeller}}</ion-col>
+        </ion-row>
+      </ion-grid>
+  
+    </ion-card-content> 
+  </ion-card> 
+  <!-- <ion-button class="update" (click)="order(key.idPesanan)">Terima Pesanan</ion-button>  -->
+</ion-content>

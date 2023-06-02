@@ -1,0 +1,11 @@
+ion-content {
+    ion-tabs {
+      height: calc(103% - 40px);
+    }
+    ion-icon.icon{
+        height: 35px;
+        width: 35px;
+        justify-content: center;
+        align-items: center;
+    }
+  }

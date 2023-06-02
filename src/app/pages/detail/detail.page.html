@@ -1,0 +1,83 @@
+<ion-header [translucent]="true"> 
+  <ion-toolbar  class="toolbar">
+    <div id="header" > 
+      <ion-icon name="arrow-back" routerLink="/tabs/all-order" class="back"></ion-icon> 
+    </div>  
+    <p class="kalimat"> 
+   Rincian Pesanan
+    </p> 
+  </ion-toolbar> 
+</ion-header> 
+
+<ion-content [fullscreen]="true" *ngFor="let key of DataToko"> 
+  <div class="content"> 
+    <div class="body"> 
+      <div class="alamat1"> 
+        <h5>Toko </h5> 
+        <span>{{ key.namaToko }}</span> 
+        <span>{{ key.phoneSeller}}</span> 
+        <span>{{key.alamatToko}}</span><br>
+        <div class="line-text">
+          <span class="lines"></span>
+        </div>
+        <div class="alamat" *ngFor="let key of  DataUSer"> 
+          <div class="user" >
+            <h5>Alamat Penerima </h5> 
+            <span>{{key.alamat}}</span>
+           <span>{{key.namauser}}</span>
+           <span>{{key.phone}}</span>
+
+           <div class="waktu" *ngFor="let key of  DataTambahan">
+             <span>Waktu Pesanan :{{key.dibuat}}</span>
+          </div>
+         </div>  
+      </div>  
+     </div>
+
+     <!-- <div class="alamat1" *ngFor="let key of  DataUSer"> 
+      <div class="user" >
+        <h5>Alamat Penerima </h5> 
+        <span>{{key.alamat}}</span>
+       <span>{{key.namauser}}</span>
+       <span>{{key.phone}}</span>
+     </div>
+     </div> -->
+     </div>
+     </div>
+     
+     <div class="container" > 
+      <ion-card *ngFor="let key of  DataProduk "> 
+        <ion-card-header class="header"> 
+          <div> 
+            <ion-card-subtitle class="judul">{{ key.namaToko }}</ion-card-subtitle> 
+          </div> 
+          <div> 
+            <ion-card-subtitle class="jdudl">{{ key.status }}</ion-card-subtitle> 
+          </div> 
+        </ion-card-header> 
+        <ion-card-content> 
+          <div class="body"> 
+            <div class="image"> 
+              <img src="{{ key.gambar }}" alt=""> 
+            </div> 
+            <div class="teks"> 
+              <div> 
+                <span>{{ key.namaProduk }}</span> 
+              </div> 
+              <div> 
+                <span> Rp.{{ key.harga }}</span> 
+                <span> x </span> 
+                <span>{{ key.jumlahBarang }} item</span> 
+              </div> 
+            </div> 
+          </div> 
+        </ion-card-content> 
+      </ion-card> 
+      <div class="alamat1" *ngFor="let key of DataTambahan"> 
+        <h6>Total Pembayaran COD : Rp.{{ key.total}}</h6> 
+      </div> 
+    </div> 
+    <ion-button color="" class="update" (click)="order(key.idPesanan)">Terima Pesanan</ion-button>  
+    </ion-content>
+    
+   

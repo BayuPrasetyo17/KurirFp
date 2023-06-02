@@ -1,0 +1,53 @@
+ion-header{
+  ion-toolbar {
+    --background:#7972e6;
+    
+  }
+    p.kalimat{
+     margin-left: 15%;
+     align-items: center;
+     font-size: 1.3rem;
+     margin-top: -31px;
+     color:#fff;
+    }
+  }
+  
+  ion-icon {
+      font-size:30px;
+      margin-left: 5px;
+      margin-top:12px;
+      color:#fff;
+    
+    }
+    .about-card {
+      margin: 20px;
+      padding: 20px;
+    
+      h2.kalimat {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: -35px;
+        left: 70px;
+        margin-left: -10%;
+        align-items: center;
+       
+      }
+    
+      p {
+        margin-bottom: 10px;
+        line-height: 1.4;
+        margin-left: -10%;
+      }
+    
+      ul {
+        margin-bottom: 10px;
+        padding-left: 20px;
+        margin-left: -3%;
+    
+        li {
+          margin-bottom: 5px;
+          margin-left: -3%;
+        }
+      }
+    }
+    
